@@ -15,7 +15,7 @@ export default function Navlinks({ navTexts, px, py }: Props) {
         <>
 
             {navTexts.map(el => (
-                <li className="self-center transition duration-300 cursor-pointer text-lightslate hover:text-green">{el.text}</li>
+                <li key={el.text} className="self-center transition duration-300 cursor-pointer text-lightslate hover:text-green">{el.text}</li>
             ))}
             {(px && py) ? <Button px={px} py={py}>Resume</Button> : <Button>Resume</Button>}
 

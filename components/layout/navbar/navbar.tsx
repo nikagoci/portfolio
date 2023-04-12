@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { useState } from 'react'
 import { RxHamburgerMenu } from 'react-icons/rx'
+import {AnimatePresence} from 'framer-motion'
 
 import Navlinks from "./navlinks";
 import BurgerMenu from "./burger-menu";
@@ -16,21 +17,26 @@ export default function Navbar() {
     const [showMenu, setShowMenu] = useState(false)
 
     return (
-        <header className="py-8">
-            <nav className="flex items-center justify-between px-8 mx-auto lg:px-12 ">
-                <div>
-                    <Image src='/images/logo.svg' alt='s' width={40} height={40} />
-                </div>
-                <div className="items-center hidden md:flex">
-                    <ul className="flex mr-8 gap-x-8 ">
-                        <Navlinks navTexts={navTexts} />
-                    </ul>
-                </div>
-                <div className="flex md:hidden">
-                    <RxHamburgerMenu className="cursor-pointer text-green" size={30} onClick={() => setShowMenu(!showMenu)} />
-                    {showMenu && <BurgerMenu navTexts={navTexts} setShowMenu={setShowMenu} />}
-                </div>
-            </nav>
-        </header>
+        
+            <header className="py-8">
+                <nav className="flex items-center justify-between px-8 mx-auto lg:px-12 ">
+                    <div>
+                        <Image src='/images/logo.svg' alt='s' width={40} height={40} />
+                    </div>
+                    <div className="items-center hidden md:flex">
+                        <ul className="flex mr-8 gap-x-8 ">
+                            <Navlinks navTexts={navTexts} />
+                        </ul>
+                    </div>
+                    
+                        <div className="flex md:hidden">
+                            <RxHamburgerMenu className="cursor-pointer text-green" size={30} onClick={() => setShowMenu(!showMenu)} />
+                            <AnimatePresence>
+                                {showMenu && <BurgerMenu key={String(showMenu)} navTexts={navTexts} setShowMenu={setShowMenu} />}
+
+                            </AnimatePresence>
+                        </div>
+                </nav>
+            </header>
     )
 }
