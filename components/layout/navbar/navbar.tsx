@@ -19,7 +19,7 @@ export default function Navbar() {
     return (
         
             <header className="py-8">
-                <nav className="flex items-center justify-between px-8 mx-auto lg:px-12 ">
+                <nav className="flex items-center justify-between def-container">
                     <div>
                         <Image src='/images/logo.svg' alt='s' width={40} height={40} />
                     </div>

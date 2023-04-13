@@ -1,6 +1,7 @@
+import Hero from "@/components/hero/hero";
 
 export default function Home() {
   return (
-    <h1>red</h1>
+    <Hero />
   )
 }

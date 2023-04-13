@@ -12,3 +12,11 @@ body{
   font-weight: 400;
   overflow-x: hidden;
 }
+
+.def-container {
+  @apply px-8 mx-auto lg:px-12 
+}
+
+.header-height {
+  height: calc(100vh - 110px);
+}
