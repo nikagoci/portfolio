@@ -2,9 +2,8 @@ import Button from "../shared/button";
 
 export default function Hero() {
   return (
-    <div>
-      <div className="flex items-center def-container header-height">
-        <div className="flex flex-col items-start py-8 mx-0 max-w-[600px] lg:max-w-[1200px] xl:ml-96 lg:ml-60 md:ml-32 gap-y-8">
+    <section>
+      <div className="flex flex-col items-start justify-center w-[80%] lg:w-[60%] gap-y-8 def-container header-height">
           <h3 className="text-xl font-light tracking-wide text-green">
             Hi, my name is
           </h3>
@@ -18,7 +17,7 @@ export default function Hero() {
             on building accessible, human-centered products at{" "}
             <span className="relative cursor-pointer text-green group">
               Upstatement
-              <span className="absolute bottom-[-5px] left-0 w-[110px] h-[2px] bg-green scale-x-0 group-hover:scale-x-100 transform-origin-left transition duration-300"></span>
+              <span className="span-design"></span>
             </span>
             .
           </p>
@@ -26,7 +25,7 @@ export default function Hero() {
             Check out my portfolio!
           </Button>
         </div>
-      </div>
-    </div>
+      </section>
   );
 }
+{/* <div className="flex items-start py-8 mx-0 max-w-[600px] lg:max-w-[1200px] xl:ml-96 lg:ml- md:ml-32 gap-y-8"> */}

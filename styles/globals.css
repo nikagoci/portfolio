@@ -17,6 +17,14 @@ body{
   @apply px-8 mx-auto lg:px-12 
 }
 
+.title-text{
+  @apply text-3xl text-lightslate after:content-[''] after:absolute after:top-1/2 after:left-[110%] after:w-[160px] after:h-[1px] after:bg-slate
+}
+
+.span-design{
+  @apply absolute bottom-[-5px] left-0 w-[110px] h-[2px] bg-green scale-x-0 group-hover:scale-x-100 transition duration-300
+}
+
 .header-height {
   height: calc(100vh - 110px);
 }
