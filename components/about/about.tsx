@@ -115,14 +115,14 @@ export default function About() {
             <div className="flex flex-col items-center justify-center gap-8 mt-16 md:gap-4 md:flex-row md:mt-0 basis-2/5">
               <div className="flex flex-row md:flex-col gap-y-9 gap-x-4 md:gap-x-0">
                 {icons1.map((icon) => (
-                  <div className="flex flex-col p-2 border rounded-sm sm:p-4 border-green hover:bg-lightgreen">
+                  <div key={icon.name} className="flex flex-col p-2 transition duration-300 border rounded-sm sm:p-4 border-green hover:bg-lightgreen">
                     <icon.icon size={25} className="text-lightslate" />
                   </div>
                 ))}
               </div>
               <div className="flex flex-row md:flex-col gap-y-9 gap-x-4 md:gap-x-0">
                 {icons2.map((icon) => (
-                  <div className="flex flex-col p-2 border rounded-sm sm:p-4 border-green hover:bg-lightgreen">
+                  <div key={icon.name} className="flex flex-col p-2 transition duration-300 border rounded-sm sm:p-4 border-green hover:bg-lightgreen">
                     <icon.icon size={25} className="text-lightslate" />
                   </div>
                 ))}
