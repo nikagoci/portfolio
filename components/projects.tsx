@@ -59,19 +59,20 @@ export default function Projects() {
         <div className="relative">
           <h2 className="title-text ">Projects I’ve Built</h2>
         </div>
-        <div className="flex flex-col gap-y-10">
+        <div className="flex flex-col items-center w-full gap-y-10">
           {allProject.map((project) => (
             <div
               key={project.title}
               className="flex flex-col items-center p-4 rounded-md gap-y-4 sm:flex-row bg-lightgreen"
             >
               <div className="flex flex-col items-center basis-3/5">
-                <div className="relative group">
+                <div className="relative group w-[90%]">
                   <Image
                     src={project.img}
                     alt={project.title}
                     width={300}
                     height={300}
+                    className="w-auto h-auto"
                   />
                   <div className="absolute top-0 left-0 flex items-center justify-center w-full h-full transition duration-300 bg-black opacity-0 gap-x-4 group-hover:opacity-80">
                     {project.links.map((link, idx) => (
