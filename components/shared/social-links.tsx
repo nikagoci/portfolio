@@ -1,4 +1,4 @@
-import { FaFacebookF, FaGithub } from "react-icons/fa";
+import { FaFacebookF } from "react-icons/fa";
 import { FiLinkedin, FiGithub } from "react-icons/fi";
 
 const socialNetwork = [
