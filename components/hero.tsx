@@ -3,7 +3,7 @@ import Button from "./shared/button";
 export default function Hero() {
   return (
     <section>
-      <div className="flex flex-col items-start justify-center w-[80%] lg:w-[60%] gap-y-8 def-container header-height">
+      <div className="h-screen flex flex-col items-start justify-center w-[80%] lg:w-[60%] gap-y-8 def-container header-height">
           <h3 className="text-xl font-light tracking-wide text-green">
             Hi, my name is
           </h3>

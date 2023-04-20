@@ -24,7 +24,3 @@ body{
 .span-design{
   @apply absolute bottom-[-5px] left-0 w-[110px] h-[2px] bg-green scale-x-0 group-hover:scale-x-100 transition duration-300
 }
-
-.header-height {
-  height: calc(100vh - 110px);
-}

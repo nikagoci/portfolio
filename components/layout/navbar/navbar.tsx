@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { RxHamburgerMenu } from 'react-icons/rx'
 import {AnimatePresence} from 'framer-motion'
 
@@ -15,11 +15,26 @@ const navTexts = [
 
 export default function Navbar() {
     const [showMenu, setShowMenu] = useState(false)
+    const [prevScrollPos, setPrevScrollPos] = useState(0)
+    const [visible, setVisible] = useState(true)
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollPos = window.pageYOffset;
+            setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 20);
+            setPrevScrollPos(currentScrollPos);
+        };
+
+
+        window.addEventListener('scroll', handleScroll)
+        return () => window.removeEventListener('scroll', handleScroll)
+    }, [prevScrollPos, visible])
+
 
     return (
         
-            <header className="py-8">
-                <nav className="flex items-center justify-between def-container">
+            <header className={`fixed py-4 w-full bg-navy transition shadow-lg duration-300 ease-in-out z-50 ${visible ? 'transform translate-y-0' : 'transform -translate-y-full'}`}>
+                <nav className={`flex items-center justify-between def-container`}>
                     <div className="w-10">
                         <Image src='/images/logo.svg' alt='logo' className="w-auto h-auto " width={40} height={40} />
                     </div>
