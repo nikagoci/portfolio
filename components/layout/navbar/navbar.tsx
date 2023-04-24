@@ -18,6 +18,13 @@ export default function Navbar() {
     const [prevScrollPos, setPrevScrollPos] = useState(0)
     const [visible, setVisible] = useState(true)
 
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+    }
+
     useEffect(() => {
         const handleScroll = () => {
             const currentScrollPos = window.pageYOffset;
@@ -35,12 +42,12 @@ export default function Navbar() {
         
             <header className={`fixed py-4 w-full bg-navy transition shadow-lg duration-300 ease-in-out z-50 ${visible ? 'transform translate-y-0' : 'transform -translate-y-full'}`}>
                 <nav className={`flex items-center justify-between def-container`}>
-                    <div className="w-10">
-                        <Image src='/images/logo.svg' alt='logo' className="w-auto h-auto " width={40} height={40} />
+                    <div onClick={scrollToTop} className="w-10 cursor-pointer">
+                        <Image src='/images/logo.svg' alt='logo' className="w-full h-auto" width="0" height="0" sizes="100vw" />
                     </div>
                     <div className="items-center hidden md:flex">
                         <ul className="flex mr-8 gap-x-8 ">
-                            <Navlinks navTexts={navTexts} />
+                            <Navlinks mobile={false} navTexts={navTexts} />
                         </ul>
                     </div>
                     
