@@ -37,6 +37,14 @@ export default function Navbar() {
         return () => window.removeEventListener('scroll', handleScroll)
     }, [prevScrollPos, visible])
 
+    useEffect(() => {
+        if(showMenu){
+            document.body.style.overflow = "hidden"
+        } else {
+            document.body.style.overflow = "visible"
+        }
+    }, [showMenu])
+
 
     return (
         
@@ -55,7 +63,6 @@ export default function Navbar() {
                             <RxHamburgerMenu className="cursor-pointer text-green" size={30} onClick={() => setShowMenu(!showMenu)} />
                             <AnimatePresence>
                                 {showMenu && <BurgerMenu key={String(showMenu)} navTexts={navTexts} setShowMenu={setShowMenu} />}
-
                             </AnimatePresence>
                         </div>
                 </nav>
