@@ -1,15 +1,15 @@
 import { AiOutlineCaretRight, AiOutlineHtml5 } from "react-icons/ai";
 import {
   SiTailwindcss,
-  SiExpress,
   SiTypescript,
   SiPrisma,
 } from "react-icons/si";
 import { IoLogoJavascript } from "react-icons/io";
 import { FaNodeJs } from "react-icons/fa";
 import { TbBrandNextjs } from "react-icons/tb";
-
 import { DiCss3, DiReact, DiMongodb } from "react-icons/di";
+
+import {motion} from 'framer-motion'
 
 const icons1 = [
   {
@@ -70,9 +70,9 @@ const technologies = [
 
 export default function About() {
   return (
-    <section>
+    <section className="mt-[1px]">
       <div className="flex items-center def-container w-[80%] md:w-[80%] lg:w-[60%]">
-        <div className="flex flex-col items-start py-8 mx-0 gap-y-8">
+        <motion.div initial={{opacity:0}} whileInView={{opacity: 1, transition: {delay: 0.5, duration: 0.3}}} className="flex flex-col items-start py-8 mx-0 gap-y-8">
           <div className="relative">
             <h2 className="title-text ">About Me</h2>
           </div>
@@ -127,12 +127,9 @@ export default function About() {
                   </div>
                 ))}
               </div>
-              {/* <div className='p-4 border border-slate'>
-                <SiTailwindcss size={25} />
-              </div> */}
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
