@@ -5,7 +5,7 @@ import {motion} from 'framer-motion'
 export default function Contact() {
   return (
     <section className="py-16">
-      <motion.div initial={{opacity:0}} whileInView={{opacity: 1, transition: {delay: 0.5, duration: 0.3}}} className="flex flex-col items-center justify-center w-[80%] lg:w-[500px] gap-y-8 def-container">
+      <motion.div initial={{opacity:0}} whileInView={{opacity: 1, transition: {delay: 0.3, duration: 0.3}}} className="flex flex-col items-center justify-center w-[80%] lg:w-[500px] gap-y-8 def-container">
           <h2 className="text-5xl font-extrabold tracking-wider text-center text-lightslate">Get In Touch</h2>
 
         <div className="flex flex-col items-center mx-auto gap-y-8" >

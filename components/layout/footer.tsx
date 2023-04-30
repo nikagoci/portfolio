@@ -23,7 +23,7 @@ const socialNetwork = [
 export default function Footer() {
   return (
     <footer className="pt-16 pb-8">
-      <motion.div initial={{opacity:0}} whileInView={{opacity: 1, transition: {delay: 0.5, duration: 0.3}}} className="flex flex-col items-center justify-center w-[80%] lg:w-[60%] gap-y-8 def-container">
+      <motion.div initial={{opacity:0}} whileInView={{opacity: 1, transition: {delay: 0.3, duration: 0.2}}} className="flex flex-col items-center justify-center w-[80%] lg:w-[60%] gap-y-8 def-container">
         <div className="flex items-center gap-x-4">
           {socialNetwork.map((social) => (
             <a

@@ -72,7 +72,7 @@ export default function About() {
   return (
     <section className="mt-[1px]">
       <div className="flex items-center def-container w-[80%] md:w-[80%] lg:w-[60%]">
-        <motion.div initial={{opacity:0}} whileInView={{opacity: 1, transition: {delay: 0.5, duration: 0.3}}} className="flex flex-col items-start py-8 mx-0 gap-y-8">
+        <motion.div initial={{opacity:0}} whileInView={{opacity: 1, transition: {delay: 0.3, duration: 0.2}}} className="flex flex-col items-start py-8 mx-0 gap-y-8">
           <div className="relative">
             <h2 className="title-text ">About Me</h2>
           </div>

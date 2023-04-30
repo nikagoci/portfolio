@@ -24,7 +24,7 @@ export default function Navlinks({ navTexts, px, py, mobile }: Props) {
           }}
           animate={{
             [mobile ? "x" : "y"]: 0,
-            transition: { delay: index * 0.3 },
+            transition: { delay: index * 0.2 },
           }}
           className="self-center transition duration-300 cursor-pointer text-lightslate hover:text-green"
         >
@@ -54,7 +54,7 @@ export default function Navlinks({ navTexts, px, py, mobile }: Props) {
             }}
             animate={{
               [mobile ? "x" : "y"]: 0,
-              transition: { delay: 1.7 },
+              transition: { delay: 1.2 },
             }}
           >
             <Button>Resume</Button>

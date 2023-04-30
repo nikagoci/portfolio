@@ -23,7 +23,7 @@ const experienceData = [
 export default function Experience() {
   return (
     <section className="py-16">
-      <motion.div initial={{opacity:0}} whileInView={{opacity: 1, transition: {delay: 0.5, duration: 0.3}}} className="flex flex-col items-start justify-center w-[80%] lg:w-[60%] gap-y-8 def-container">
+      <motion.div initial={{opacity:0}} whileInView={{opacity: 1, transition: {delay: 0.3, duration: 0.2}}} className="flex flex-col items-start justify-center w-[80%] lg:w-[60%] gap-y-8 def-container">
         <div className="relative">
           <h2 className="title-text">My Experience</h2>
         </div>
