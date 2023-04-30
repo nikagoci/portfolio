@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import { AiFillEye, AiFillGithub } from "react-icons/ai";
+import { motion } from "framer-motion";
 
 const allProject = [
   {
@@ -39,17 +40,17 @@ const allProject = [
   },
   {
     title: "Pomofocus Timer",
-    description: "Pomofocus is website which help people track time for productivity.",
+    description:
+      "Pomofocus is website which help people track time for productivity.",
     technologies: ["Next", "Framer", "Typescript", "Tailwind"],
-    img: '/images/pomofocus.png',
+    img: "/images/pomofocus.png",
     links: [
-
-          {
-            to: "https://github.com/nikagoci/pomofocus-timer",
-            icon: AiFillGithub,
-          },
-    ]
-  }
+      {
+        to: "https://github.com/nikagoci/pomofocus-timer",
+        icon: AiFillGithub,
+      },
+    ],
+  },
 ];
 
 export default function Projects() {
@@ -60,8 +61,10 @@ export default function Projects() {
           <h2 className="title-text ">Projects I’ve Built</h2>
         </div>
         <div className="flex flex-col items-center w-full gap-y-10">
-          {allProject.map((project) => (
-            <div
+          {allProject.map((project, index) => (
+            <motion.div
+              initial={{opacity:0, x: -100}}
+              whileInView={{opacity: 1, x: 0, transition: {delay: index * 0.3}}}
               key={project.title}
               className="flex flex-col items-center p-4 rounded-md gap-y-4 sm:flex-row bg-lightgreen"
             >
@@ -104,7 +107,7 @@ export default function Projects() {
                   ))}
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
