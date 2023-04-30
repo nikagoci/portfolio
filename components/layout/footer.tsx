@@ -1,5 +1,6 @@
 import { FaFacebookF } from "react-icons/fa";
 import { FiLinkedin, FiGithub } from "react-icons/fi";
+import {motion } from 'framer-motion'
 
 const socialNetwork = [
   {
@@ -22,7 +23,7 @@ const socialNetwork = [
 export default function Footer() {
   return (
     <footer className="pt-16 pb-8">
-      <div className="flex flex-col items-center justify-center w-[80%] lg:w-[60%] gap-y-8 def-container">
+      <motion.div initial={{opacity:0}} whileInView={{opacity: 1, transition: {delay: 0.5, duration: 0.3}}} className="flex flex-col items-center justify-center w-[80%] lg:w-[60%] gap-y-8 def-container">
         <div className="flex items-center gap-x-4">
           {socialNetwork.map((social) => (
             <a
@@ -38,7 +39,7 @@ export default function Footer() {
         <h2 className="text-sm font-light tracking-widest">
           Built by Nika Gotsiridze
         </h2>
-      </div>
+      </motion.div>
     </footer>
   );
 }
