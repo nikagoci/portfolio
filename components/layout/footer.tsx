@@ -1,13 +1,7 @@
-import { FaFacebookF } from "react-icons/fa";
 import { FiLinkedin, FiGithub } from "react-icons/fi";
 import {motion } from 'framer-motion'
 
 const socialNetwork = [
-  {
-    icon: FaFacebookF,
-    to: "https://www.facebook.com/",
-    name: "facebook",
-  },
   {
     icon: FiGithub,
     to: "https://github.com/",

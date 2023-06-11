@@ -1,4 +1,4 @@
-import { Dispatch, MouseEvent, SetStateAction } from 'react'
+import { Dispatch, SetStateAction } from 'react'
 import { AiOutlineClose } from 'react-icons/ai'
 import { motion } from 'framer-motion'
 

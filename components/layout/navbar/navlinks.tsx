@@ -1,5 +1,4 @@
 import Button from "../../shared/button";
-import Link from 'next/link'
 
 import { motion } from "framer-motion";
 
@@ -7,7 +6,7 @@ interface Props {
   navTexts: {
     text: string;
     to: string;
-    scrollTar: string
+    scrollTar?: string
   }[];
   px?: string;
   py?: string;

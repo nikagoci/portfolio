@@ -14,9 +14,9 @@ export default function ExperienceCard({ experience }: Props) {
       <Image
         src={experience.img}
         alt={experience.name}
-        width={200}
-        height={200}
-        className="w-auto h-auto"
+        width={384}
+        height={384}
+        className="h-auto w-96"
       />
       <h3>{experience.name}</h3>
       <p className="text-center">{experience.description}</p>
