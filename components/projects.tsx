@@ -55,7 +55,7 @@ const allProject = [
 
 export default function Projects() {
   return (
-    <section className="py-16">
+    <section className="py-16" id="projects">
       <div className="flex flex-col items-start justify-center w-[80%] lg:w-[60%] gap-y-8 def-container">
         <div className="relative">
           <h2 className="title-text ">Projects I’ve Built</h2>

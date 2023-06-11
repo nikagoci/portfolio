@@ -7,10 +7,10 @@ import Navlinks from "./navlinks";
 import BurgerMenu from "./burger-menu";
 
 const navTexts = [
-    { text: 'About', to: '#about' },
-    { text: 'Experience', to: '#experience' },
-    { text: 'Projects', to: '#projects' },
-    { text: 'Contact', to: '#contact' },
+    { text: 'About', to: '#about', scrollTar: 'about' },
+    { text: 'Experience', to: '#experience', scrollTar: 'experience'},
+    { text: 'Projects', to: '#projects', scrollTar: 'projects'},
+    { text: 'Contact', to: '#contact', scrollTar: 'contact'},
 ]
 
 export default function Navbar() {
@@ -50,9 +50,9 @@ export default function Navbar() {
         
             <header className={`fixed py-4 w-full bg-navy transition shadow-lg duration-300 ease-in-out z-50 ${visible ? 'transform translate-y-0' : 'transform -translate-y-full'}`}>
                 <nav className={`flex items-center justify-between def-container`}>
-                    <div onClick={scrollToTop} className="w-10 cursor-pointer">
+                    <a href='#home' data-to-scrollspy-id="home" className="w-10 cursor-pointer">
                         <Image src='/images/logo.svg' alt='logo' className="w-full h-auto" width="0" height="0" sizes="100vw" />
-                    </div>
+                    </a>
                     <div className="items-center hidden md:flex">
                         <ul className="flex mr-8 gap-x-8 ">
                             <Navlinks mobile={false} navTexts={navTexts} />

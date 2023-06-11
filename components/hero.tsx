@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section>
+    <section id='home'>
       <div className="h-screen flex flex-col items-start justify-center w-[80%] lg:w-[60%] gap-y-8 def-container header-height">
         <motion.h3
           initial={{ y: -100, opacity:0 }}

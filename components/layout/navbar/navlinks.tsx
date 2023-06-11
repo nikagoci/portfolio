@@ -1,4 +1,5 @@
 import Button from "../../shared/button";
+import Link from 'next/link'
 
 import { motion } from "framer-motion";
 
@@ -6,6 +7,7 @@ interface Props {
   navTexts: {
     text: string;
     to: string;
+    scrollTar: string
   }[];
   px?: string;
   py?: string;
@@ -16,8 +18,9 @@ export default function Navlinks({ navTexts, px, py, mobile }: Props) {
   return (
     <>
       {navTexts.map((el, index) => (
-        <motion.li
-          key={el.text}
+
+        <motion.a
+          href={el.to}
           initial={{
             [mobile ? "x" : "y"]: mobile ? 340 : -60,
             
@@ -27,9 +30,10 @@ export default function Navlinks({ navTexts, px, py, mobile }: Props) {
             transition: { delay: index * 0.2 },
           }}
           className="self-center transition duration-300 cursor-pointer text-lightslate hover:text-green"
+          data-to-scrollspy-id={el.scrollTar}
         >
           {el.text}
-        </motion.li>
+        </motion.a>
       ))}
       <div
       >

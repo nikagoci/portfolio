@@ -70,7 +70,7 @@ const technologies = [
 
 export default function About() {
   return (
-    <section className="mt-[1px]">
+    <section className="mt-[1px]" id="about">
       <div className="flex items-center def-container w-[80%] md:w-[80%] lg:w-[60%]">
         <motion.div initial={{opacity:0}} whileInView={{opacity: 1, transition: {delay: 0.3, duration: 0.2}}} className="flex flex-col items-start py-8 mx-0 gap-y-8">
           <div className="relative">
