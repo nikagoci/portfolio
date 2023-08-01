@@ -42,6 +42,10 @@ const allProject = [
     img: "/images/pomofocus.png",
     links: [
       {
+        to: "https://pomofocus-gamma.vercel.app/",
+        icon: AiFillEye,
+      },
+      {
         to: "https://github.com/nikagoci/pomofocus-timer",
         icon: AiFillGithub,
       },

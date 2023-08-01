@@ -19,6 +19,7 @@ export default function Navlinks({ navTexts, px, py, mobile }: Props) {
       {navTexts.map((el, index) => (
 
         <motion.a
+          key={index}
           href={el.to}
           initial={{
             [mobile ? "x" : "y"]: mobile ? 340 : -60,

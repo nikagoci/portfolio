@@ -63,6 +63,8 @@ const technologies = [
   "Next",
   "Tailwind",
   "GraphQL",
+  "Angular",
+  "Express"
 ];
 
 export default function About() {
@@ -85,24 +87,18 @@ export default function About() {
               <p>
                 Hello! My name is Nika and I enjoy creating things that live on
                 the internet. My interest in web development started back in
-                2019 when I decided to try creating custom website — turns out
-                hacking together a custom reblog button taught me a lot about
-                HTML & CSS!
+                2020 when I decided to try creating custom website. After that moment, I realized how much I love this job and decided to become a programmer
               </p>
               <p>
-                Fast-forward to today, and I’ve had the privilege of working at
-                an advertising agency, a start-up, a huge corporation, and a
-                student-led design studio. My main focus these days is building
-                accessible, inclusive products and digital experiences at &nbsp;
+                From 2020 I am creating websites with and without mentorship. I gained enough knowledge to successfully create
+                fully functional websites. You can check some of my full stack projects on &nbsp;
+                <a href="#projects">
                 <span className="relative cursor-pointer text-green group">
-                  Upstatement
+                  Projects section
                   <span className="span-design"></span>
                 </span>
+                </a>
                 &nbsp; for a variety of clients.
-              </p>
-              <p>
-                I also recently launched a course that covers everything you
-                need to build a web app with the Spotify API using Node & React.
               </p>
               <p>
                 Here are a few technologies I’ve been working with recently:
