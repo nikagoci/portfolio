@@ -1,6 +1,6 @@
-import Button from "../../shared/button";
-
 import { motion } from "framer-motion";
+
+import Button from "../../shared/button";
 
 interface Props {
   navTexts: {
@@ -61,7 +61,14 @@ export default function Navlinks({ navTexts, px, py, mobile }: Props) {
               transition: { delay: 1.2 },
             }}
           >
-            <Button>Resume</Button>
+            <a
+              href="/pdf/nikagoci.pdf"
+              download="Nika-Gotsiridze-Resume"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Button>Resume</Button>
+            </a>
           </motion.div>
         )}
       </div>
