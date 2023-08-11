@@ -16,7 +16,7 @@ export default function BurgerMenu({ navTexts, setShowMenu }: Props) {
     return (
         <>
             <div className="absolute h-[100vh] top-0 left-0 w-full bg-black blur-3xl opacity-60" onClick={() => setShowMenu(false)} />
-            <motion.div initial={{ width: 0, opacity: 0, }} animate={{ width: '60%', opacity: 1 }} exit={{ width: 0, opacity: 0 }} className="absolute top-0 right-0 z-20 flex items-center justify-center h-[135vh] bg-navy">
+            <motion.div initial={{ width: 0, opacity: 0, }} animate={{ width: '60%', opacity: 1 }} exit={{ width: 0, opacity: 0 }} className="absolute top-0 right-0 z-20 flex items-center justify-center h-[100vh] bg-navy">
                 <ul className="flex flex-col items-center justify-center text-xl font-semibold gap-y-12">
                     <Navlinks mobile={true} navTexts={navTexts} px='px-12' py='py-4' />
                 </ul>
